@@ -5,7 +5,7 @@ function Create() {
   const [task,setTask]=useState()
   const handleAdd=()=>
     {
-        axios.post('https://todolist-mern-stack-q1q4.onrender.com',{task:task})
+        axios.post('https://todolist-mern-stack-q1q4.onrender.com'+'/add',{task:task})
         .then(result=>{
           location.reload() 
 

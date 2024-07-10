@@ -26,7 +26,7 @@ function Home() {
         const handleDelete=(id)=>
           {
             const id1=id
-            axios.delete('https://todolist-mern-stack-q1q4.onrender.com`+`/delete/${id1}`)
+            axios.delete(`https://todolist-mern-stack-q1q4.onrender.com`+`/delete/${id1}`)
             
           .then(result=>{
             location.reload()

@@ -9,14 +9,14 @@ function Home() {
     const [todos,setTodos]=useState([])
     useEffect(()=>
       {
-        axios.get('https://todolist-mern-stack-q1q4.onrender.com')
+        axios.get('https://todolist-mern-stack-q1q4.onrender.com'+'/add')
         .then(result=>setTodos(result.data))
         .catch(err=>console.log(err))
       },[])
       const handleEdit=(id)=>
         {
           const id1=id
-          axios.put(`http://localhost:3001/update/${id1}`)
+          axios.put(`https://todolist-mern-stack-q1q4.onrender.com`+`/update/${id1}`)
           .then(result=>{
             location.reload()
           })
@@ -26,7 +26,7 @@ function Home() {
         const handleDelete=(id)=>
           {
             const id1=id
-            axios.delete(`http://localhost:3001/delete/${id1}`)
+            axios.delete(https://todolist-mern-stack-q1q4.onrender.com`+`/delete/${id1}`)
             
           .then(result=>{
             location.reload()

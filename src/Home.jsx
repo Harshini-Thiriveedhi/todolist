@@ -9,7 +9,7 @@ function Home() {
     const [todos,setTodos]=useState([])
     useEffect(()=>
       {
-        axios.get('http://localhost:3001/get')
+        axios.get('https://todolist-mern-stack-q1q4.onrender.com')
         .then(result=>setTodos(result.data))
         .catch(err=>console.log(err))
       },[])
